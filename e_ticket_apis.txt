@@ -1,0 +1,52 @@
+* BASE URL * => http://localhost:4444/
+
+For Authentication
+POST : /authentication/login
+POST : /authentication/signup
+POST : /authentication/sendPin
+PATCH : /authentication/changePwd
+
+For Passenger
+GET : /passenger/fetch
+GET : /passenger/fetchPayment
+GET : /passenger/fetchStations
+PATCH : /passenger/change
+PATCH : /passenger/changeImage
+POST : /passenger/fetchFare
+
+For Conductor
+GET : /conductor/fetch
+GET : /conductor/fetchPayment
+POST : /conductor/change
+POST : /conductor/changeImage
+POST : /conductor/recharge
+
+For ticket
+POST : /ticket/fetch
+GET : /ticket/fetchActive
+POST : /ticket/create
+POST : /ticket/cancel
+
+For Admin
+GET : /admin/dailyPayment
+GET : /admin/dailyTicket/fare
+GET : /admin/dailyTicket/count
+
+GET : /admin/fetchAllPassengers
+GET : /admin/fetchAllConductors
+GET : /admin/fetchAllPayments
+GET : /admin/fetchAllTickets
+GET : /admin/fetchAllStations
+
+POST : /admin/addStation
+DELETE : /admin/deleteStation
+POST : /admin/createAdmin
+DELETE : /admin/deleteAdmin
+POST : /admin/createConductor
+DELETE : /admin/deleteConductor
+
+POST : /admin/passenger/fetch
+POST : /admin/passenger/fetchPayment
+POST : /admin/conductor/fetch
+POST : /admin/conductor/fetchPayment
+POST : /admin/ticket/fetch
