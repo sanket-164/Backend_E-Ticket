@@ -4,10 +4,10 @@ import con from "../../database.js";
 
 router.post('/', async (req, res) => {
     let success = false;
-    const { feedback } = req.body;
+    const { feedback, topic } = req.body;
     const d = new Date();
     const f_id = 'F' + ('0' + d.getFullYear()).slice(3) + ('0' + d.getMonth()).slice(-2) + ('0' + d.getDate()).slice(-2) + ('0' + d.getHours()).slice(-2) + ('0' + d.getMinutes()).slice(-2) + ('0' + d.getSeconds()).slice(-2) + ('0' + d.getMilliseconds()).slice(-2);
-    const inFeedback = `INSERT INTO feedback VALUES ('${f_id}', '${req.user.id}', null, '${feedback}', CURRENT_TIMESTAMP(), null, null, 'Pending')`;
+    const inFeedback = `INSERT INTO feedback VALUES ('${f_id}', '${topic}', '${req.user.id}', '${feedback}', CURRENT_TIMESTAMP(), null, null, null, 'Pending')`;
     
     try{
         con.query(inFeedback, (err, qres) => {

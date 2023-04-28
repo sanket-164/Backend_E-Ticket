@@ -76,10 +76,11 @@ create table login (
 
 create table feedback(
     f_id char(15),
-    p_id char(15) NOT NULL,
-    a_id char(15),
+    topic varchar(50) NOT NULL,
+    p_id char(15),
     feedback varchar(255) NOT NULL,
     f_time datetime NOT NULL,
+    a_id char(15),
     reply varchar(255),
     r_time datetime,
     f_status char(7) NOT NULL,
